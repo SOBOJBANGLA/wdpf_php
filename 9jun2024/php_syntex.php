@@ -1,17 +1,17 @@
 <?php
-//full syntax
- echo "Hello world <br>";
+// full syntax
+echo "Hello World <br>";
+
+?>
+
+<?php
+// short open Tag
+echo "Hello World with short tag <br>";
+?>
+
+<?= "Hello World with short circuit<br>"
+// short circuit
 
 ?>
  
-<?
-// open short tag
- echo "Hello world tag<br>";
 
- ?>
-
-<?= "Hello world tag circuit";
-// short circuit
- 
-
- ?>
