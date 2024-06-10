@@ -4,12 +4,14 @@ $y= 10;
 $p=30;
 
 function myTest(){
-    $x =3 ; $y =2 ;
+    $x =7 ; $y =74;
     $y = $x + $y;
+    echo $y;
+    
 }
 
 myTest();
-echo $y;
+//echo $y;
 
 echo "<pre>";
 print_r($GLOBALS);

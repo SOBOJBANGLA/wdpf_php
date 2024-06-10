@@ -4,7 +4,7 @@ echo "Hello World <br>";
 
 ?>
 
-<?php
+<?
 // short open Tag
 echo "Hello World with short tag <br>";
 ?>
@@ -14,10 +14,7 @@ echo "Hello World with short tag <br>";
 
 ?>
  
-<<<<<<< HEAD
-<?php
-// open short tag
- echo "Hello world lion<br>";
-=======
->>>>>>> 53cf13aacc5891c50c1ebfdc4f7aa311986ba545
+
+
+
 

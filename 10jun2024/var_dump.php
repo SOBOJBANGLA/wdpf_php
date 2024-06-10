@@ -3,7 +3,12 @@ $x = 10;
 $y = "Sunday";
 $z = array(10,20,50,60);
 
-var_dump($z); //var_dump() for describing a variable
+var_dump($z) ;
+echo "<br>";
+var_dump($y);
+echo "<br>";
+var_dump($x) ;
+//var_dump() for describing a variable
 
 //print_r() for describing an array
 
