@@ -4,9 +4,9 @@
 
 ?>
  
-<?
+<?php
 // open short tag
- echo "Hello world tag<br>";
+ echo "Hello world lion<br>";
 
  ?>
 
