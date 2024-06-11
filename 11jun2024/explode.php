@@ -1,6 +1,6 @@
 <?php
 
-$x = "Hello World";
+$x = "Hello Bangla";
 
 $words =explode(" ", $x);
 
