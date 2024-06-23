@@ -20,7 +20,7 @@
     
 }*/
 
-if($_SERVER['REQUEST_METHOD']=='POST') {
+/*if($_SERVER['REQUEST_METHOD']=='POST') {
     $secretNumber =500;
     if ($_POST['guess'] == $secretNumber) {
         echo "Congratulations!";
@@ -30,7 +30,21 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
             echo "Try again";
         }
     
+}*/
+if(isset($_POST['submit'])){
+if($_SERVER['REQUEST_METHOD']=='POST'){
+$sc=500;
+if($_POST['guess']==$sc){
+    echo "Congratulations";
+}else if(abs($sc-$_POST['guess'])<20){
+    echo "you are too close";
+}else{
+    echo "Try again";
 }
+
+}
+}
+
 
 ?>
 
