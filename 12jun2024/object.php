@@ -5,9 +5,9 @@ class Student {
     public $age;
 
     
-    function register($name, $age) {
-        $this->name = $name;
-        $this->age = $age;
+    function register($nam, $ag) {
+        $this->name = $nam;
+        $this->age = $ag;
 }
 }
 

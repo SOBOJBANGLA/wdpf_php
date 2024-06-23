@@ -38,15 +38,15 @@ if(isset($_REQUEST["subscribe"])){
 <h4>post method</h4>
 
 <form action="" method="post">
-<p>
-Email address:<br />
-<input type="text" name="email"  value="" />
-</p>
-<p>
-Password:<br />
-<input type="password" name="pswd"  value="" />
-</p>
-<p>
+
+Email address:<br>
+<input type="text" name="email"  value="" /><br>
+
+
+Password:<br>
+<input type="password" name="pswd"  value="" /><br>
+
+
 <input type="submit" name="subscribe" value="subscribe!" />
-</p>
+
 </form>
