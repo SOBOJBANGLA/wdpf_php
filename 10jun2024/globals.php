@@ -1,5 +1,5 @@
 <?php
-$x =5;
+/*$x =5;
 $y= 10;
 $p=30;
 
@@ -14,6 +14,26 @@ myTest();
 //echo $y;
 
 echo "<pre>";
+print_r($GLOBALS);*/
+
+$x =10;
+$y =20;
+$z =30;
+
+function myTest(){
+$x = 8 ; $y =50;
+$y =$x +$y ;
+
+echo $y;
+
+}
+
+myTest();
+
+//echo$y;
+
+echo "<pre>";
+
 print_r($GLOBALS);
 
 
