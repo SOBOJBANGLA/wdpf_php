@@ -1,5 +1,5 @@
 <?php
-$students = array("Tanima" =>20, "Saif"=>19,"Abdullah"=>22);
+$students = array("Tanim" =>20, "Saif"=>19,"Abdullah"=>22);
 $found = array_search("20" , $students);
 
 if($found){
