@@ -1,0 +1,4 @@
+1|10|Lux|80Taka
+2|11|Wheel|75Taka
+3|12|Chaka|50Taka
+4|13|Meril|60Taka
