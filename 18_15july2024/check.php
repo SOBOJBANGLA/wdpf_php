@@ -1,20 +1,16 @@
 <?php
 $userEmail = "abdullah@gmail.com";
-$UserPass = "123456";
+$userPass = "123456";
 
 $email= $_POST['email'];
 $password= $_POST['password'];
 
-if( $userEmail ==$email && $password == $userPass){
+if($email == $userEmail && $password == $userPass){
     session_start();
-
-    $_SESSION['email']=$email;
-    
-    header("Location:h.php");
+    $_SESSION['email'] = $email;
+    header("Location: h.php");
 }else{
-    header("Location:login.php");
+    header("Location: login.php");
 }
-
-
 
 ?>

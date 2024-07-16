@@ -1,9 +1,9 @@
-<?php
-session_start();
-if (!isset($_SESSION['email'])){
-    header("Location:login.php");
-};
+<?php 
 
+session_start();
+if(!isset($_SESSION['email'])){
+    header("Location: login.php");
+}
 
 ?>
 
@@ -16,8 +16,8 @@ if (!isset($_SESSION['email'])){
     <title>Document</title>
 </head>
 <body>
-    <h1>This is home page</h1>
+    <h1>This is Home Page</h1><br>
     <a href="logout.php">Logout</a>
-
 </body>
 </html>
+
