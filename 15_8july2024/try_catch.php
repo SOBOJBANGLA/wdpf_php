@@ -16,6 +16,5 @@ try {
         } catch (Exception $e) {
         echo $e->getMessage();
         }*/
-FILTER_V
 
 ?>
