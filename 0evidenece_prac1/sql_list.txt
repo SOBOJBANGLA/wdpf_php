@@ -1,0 +1,23 @@
+1.SELECT * FROM `employees`;
+
+2.SELECT * FROM employees WHERE employeeNumber = 1088
+3.SELECT * FROM employees WHERE jobTitle = 'Sales Rep'
+3.1. SELECT DISTINCT firstName,jobTitle FROM employees WHERE jobTitle= 'Sales Rep' ORDER BY firstName;
+3.2. SELECT customerNumber,customerName,phone,state FROM customers WHERE customerNumber BETWEEN 120 AND 150;
+3.3. SELECT * FROM `employees` WHERE jobTitle != 'Sales Rep';
+
+4.SELECT employeeNumber, firstName, lastName from employees WHERE jobTitle = 'Sales Rep';
+
+S.ELECT employeeNumber, firstName, lastName, reportsTo from employees WHERE jobTitle = 'Sales Rep' AND reportsTo = 1102 ;
+
+6.SELECT firstName FROM employees ORDER BY firstName ASC;
+7.SELECT firstName, lastName FROM employees ORDER BY firstName DESC;
+8.SELECT * FROM `employees` LIMIT 0, 5;
+
+9.SELECT `customerNumber`, `customerName`, city, country FROM customers WHERE `country` = 'USA' AND `city`= 'NYC' OR `city` = 'Allentown';
+
+10.SELECT productCode, productName, buyPrice FROM products WHERE buyPrice > 50 AND buyPrice < 100
+
+11.SELECT DISTINCT country FROM customers;
+
+12.SELECT employeeNumber, lastName, firstName, city, country,offices.officeCode FROM employees, offices  WHERE offices.officeCode = employees.officeCode
