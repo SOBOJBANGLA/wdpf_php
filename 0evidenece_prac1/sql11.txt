@@ -26,9 +26,10 @@ S.ELECT employeeNumber, firstName, lastName, reportsTo from employees WHERE jobT
 
 12.SELECT employeeNumber, lastName, firstName, city, country,offices.officeCode FROM employees, offices  WHERE offices.officeCode = employees.officeCode
 12.1. SELECT customers.customerNumber,customerName,orderNumber,orderDate,status, customers.customerNumber FROM customers, orders WHERE customers.customerNumber = orders.customerNumber;
-12.2. SELECT customers.customerNumber,customerName,orderNumber,orderDate,status, customers.customerNumber FROM customers as c, orders as o WHERE customers.customerNumber = orders.customerNumber;
+12.2. SELECT c.customerNumber,customerName,orderNumber,orderDate,status  FROM customers as c, orders as o WHERE c.customerNumber = o.customerNumber;
+12.3.SELECT e.officeCode,employeeNumber,firstName,city,country  FROM employees as e, offices as o WHERE e.officeCode = o.officeCode;
 
-12.2. SELECT customers.customerNumber,customerName,orderNumber,orderDate,status FROM customers, orders  WHERE customers.customerNumber = orders.customerNumber AND status != 'Shipped';
+12.4. SELECT customers.customerNumber,customerName,orderNumber,orderDate,status FROM customers, orders  WHERE customers.customerNumber = orders.customerNumber AND status != 'Shipped';
 
 13. SELECT COUNT(orderNumber),status FROM `orders` GROUP BY status;
 14. SELECT orderNumber,SUM(priceEach*quantityOrdered) FROM `orderdetails` GROUP BY orderNumber;
