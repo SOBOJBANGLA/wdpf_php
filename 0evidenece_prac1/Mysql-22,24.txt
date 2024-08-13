@@ -60,14 +60,10 @@ d)reload
 Answer: D
 
 9)To Displaying Results Vertically we use-
-a)mysql>use mysql;
-mysql>select * from db\G
-b)mysql>use mysql;
-mysql>select * from db\G;
-c)mysql>use mysql;
-mysql>select * from db\g
-d)mysql>use mysql;
-mysql>select * from db\g;
+a)mysql>use mysql;mysql>select * from db\G
+b)mysql>use mysql;mysql>select * from db\G;
+c)mysql>use mysql;mysql>select * from db\g
+d)mysql>use mysql;mysql>select * from db\g;
 
 Answer: A
 
