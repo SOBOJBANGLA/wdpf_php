@@ -1,0 +1,80 @@
+1.MySQL is freely available and is open source?
+a)True
+b)False
+
+Answer: A
+
+
+2.Which of the following are MySql Features?
+a)Replication
+b)Query Caching
+c)Storage
+d)Security
+
+Answer: A,B,D
+
+3)What are the MySql License Options?
+a)MySql Open Source License
+b)MySql Personal Edition License
+c)Commercial License
+d)Enterprise Edition License
+
+Answer: A,C
+
+4)Craigslist is one of the MySQL prominent user?
+a)True
+b)False
+
+Answer: A
+
+5) Which of the following are true about MySqL Client?
+a)capable of managing almost every conceivable aspect of a MySQL server, including creating, modifying, and deleting tables and databases
+b)Capable of Database backup, Restore etc
+c)Viewing Configuration Variables and System Status
+d)None
+
+Answer:A
+
+6)The syntex of connection options is-
+a)%>mysql -h hostname -u username -p -D databasename
+b)%>mysql -h hostname -p username -u -D databasename
+c)%>mysql -D databasename -p username -u -h hostname
+d)All
+
+Answer: A
+
+7)To Logging Queries we use-
+a)mysql>\T file name (text)
+b)mysql>\t file name (text)
+c)mysql>sourse drive name\ file name (text)
+d)None
+
+Answer: A
+
+8)Which of the following is not mysqladmin commands?
+a)create databasename
+b)drop databasename
+c)variables
+d)reload
+
+Answer: D
+
+9)To Displaying Results Vertically we use-
+a)mysql>use mysql;
+mysql>select * from db\G
+b)mysql>use mysql;
+mysql>select * from db\G;
+c)mysql>use mysql;
+mysql>select * from db\g
+d)mysql>use mysql;
+mysql>select * from db\g;
+
+Answer: A
+
+10)Which of the following option is used to connect remote mysql database with other options?
+a)-h
+b)-G
+c)-b
+d)-E
+
+Answer: A
