@@ -9,7 +9,7 @@ $db = "wdpf60";
 @$con = new mysqli($host,$user,$pass,$db);
 
 if ($con->connect_error) {
-    echo "Connection failed " . $conn->connect_error;
+    echo "Connection failed " . $con->connect_error;
     exit();
   }
   
