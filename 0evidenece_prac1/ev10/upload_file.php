@@ -54,7 +54,6 @@
 
     ?>
 
-
     <form action="" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" ><br>
         <input type="submit" value="upload" name="submit">
