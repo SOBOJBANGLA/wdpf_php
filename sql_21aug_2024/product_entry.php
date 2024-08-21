@@ -1,4 +1,4 @@
-
+<?php require_once ("db_config.php" ); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +9,17 @@
 <body>
     <h2>Product entry</h2>
     <?php
+    $sql = "SELECT * FROM category";
+    $cats=$db->query($sql);
+
+
     if(isset($_POST['submit'])){
         extract($_POST);
         
 
-       $sql= "INSERT INTO products(id,product_name,product_details,product_price,product_quantity) VALUES (NULL,'$name','$details','$price','$quantity')";
+       $sql= "INSERT INTO products(id,product_name,product_details,product_price,product_quantity,product_category) VALUES (NULL,'$name','$details','$price','$quantity','$category')";
 
-       require_once ("db_config.php" );
+     
       $result= $db->query($sql);
        if($db->affected_rows){
         echo "Successfully Added";
@@ -37,7 +41,17 @@
    <input type="text" name="price" ><br>
    Quantity: <br>
    <input type="number" name="quantity" ><br>
+    Category:  <br>
+    <select name="category" >
+        <option value="">Select one</option>
+        <?php
+        while($row = $cats->fetch_assoc()){ ?>
+            <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
 
+
+      <?php  }?>
+         ?>
+    </select><br>
    <input type="submit" value="submit" name="submit"><br><br>
 
 
