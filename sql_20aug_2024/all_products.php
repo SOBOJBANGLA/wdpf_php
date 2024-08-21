@@ -6,7 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All products</title>
-    
+    <style>
+        th,td{
+            border: 1px solid ;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
     
@@ -19,7 +26,7 @@
 
       ?>
 
-      <table border="1">
+      <table>
             <tr>
                 <th>ID</th>
             <th>Product</th>
