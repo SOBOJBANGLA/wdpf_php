@@ -9,6 +9,7 @@
 <body>
     <h2>Product entry</h2>
     <?php
+    // category list collect
     $sql = "SELECT * FROM category";
     $cats=$db->query($sql);
 
@@ -21,10 +22,10 @@
 
      
       $result= $db->query($sql);
-       if($db->affected_rows){
-        echo "Successfully Added";
+       if($db->error){
+        echo "Failed" ;
        }else{
-        echo "Failed";
+        echo "Successfully Added";
        }
     }
 
@@ -46,7 +47,7 @@
         <option value="">Select one</option>
         <?php
         while($row = $cats->fetch_assoc()){ ?>
-            <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+            <option value="<?php echo $row['Id'] ?>"><?php echo $row['name'] ?></option>
 
 
       <?php  }?>

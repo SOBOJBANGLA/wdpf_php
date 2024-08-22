@@ -9,24 +9,26 @@
 <body>
     <h2>Product Edit</h2>
     <?php
+    // category list collect
+    $sql = "SELECT * FROM category";
+    $cats=$db->query($sql);
 
+//pick id from URL and from
    $id= $_REQUEST['id'];
   
-
-
 
     if(isset($_POST['submit'])){
         extract($_POST);
         
 
-       $sql= "UPDATE products SET product_name='$name',product_details='$details',product_price='$price',product_quantity='$quantity' WHERE id = '$id'";
+       $sql= "UPDATE products SET product_name='$name',product_details='$details',product_price='$price',product_quantity='$quantity', product_category ='$category' WHERE id = '$id'";
 
        
       $result= $db->query($sql);
-       if($db->affected_rows){
-        echo "Successfully updated";
+      if($db->error){
+        echo "Failed" ;
        }else{
-        echo "Failed";
+        echo "Successfully Added";
        }
     }
     //getting data from table
@@ -48,6 +50,17 @@
    <input type="text" name="price" value="<?php echo $row->product_price  ?>" ><br>
    Quantity: <br>
    <input type="number" name="quantity" value="<?php echo $row->product_quantity  ?>" ><br>
+   Category:  <br>
+    <select name="category" >
+        <option value="">Select one</option>
+        <?php
+        while($cat = $cats->fetch_assoc()){ ?>
+            <option value="<?php echo $cat['Id'] ?>" <?php echo $row->product_category == $cat['Id']? "selected" : " ";?>><?php echo $cat['name'] ?></option>
+
+
+      <?php  }?>
+         
+    </select><br>
 
    <input type="submit" value="update" name="submit"><br><br>
    <input type="hidden" name="id" value="<?php echo $id  ?>">

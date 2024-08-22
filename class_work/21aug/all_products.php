@@ -21,9 +21,9 @@
     <?php
       //$sql = "SELECT * FROM  products";
 
-      $sql = "SELECT * FROM  products,category WHERE category.id=products.product_category";
+      $sql = "SELECT * FROM  products,category WHERE category.Id=products.product_category";
       $data =$db->query( $sql );
-      $num = 1;
+     
 
       ?>
 
@@ -42,7 +42,7 @@
 <?php while($row =$data->fetch_assoc()){?>
        
         <tr>
-            <td><?php echo $num/*$row['id']*/ ?></td>
+            <td><?php echo $row['id'] ?></td>
             <td><?php echo $row['product_name'] ?></td>
             <td><?php echo $row['product_details'] ?></td>
             <td><?php echo $row['product_price'] ?></td>
@@ -53,7 +53,7 @@
             <a href="product_edit.php?id=<?php echo $row['id'] ?>"><img src="update.png" width="15"></a></td>
         </tr>
 
-     <?php $num++;}?>
+     <?php }?>
       
      </table>
      <br><br>
