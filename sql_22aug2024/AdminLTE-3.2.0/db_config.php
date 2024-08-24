@@ -1,9 +1,9 @@
 <?php
 
-define("HOST","localhost");
+define("HOST","localhost:3310");
 define("USR","root");
 define("PASS","");
-define("DATABASE","w5");
+define("DATABASE","w60");
 
 $db = new mysqli();
 @$db->connect(HOST,USR,PASS,);
