@@ -16,20 +16,20 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-  
+
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-    
+
     <?php
     session_start();
     if(isset($_SESSION['error'])){
-      echo '<div class="alert-danger">'.$_SESSION['error'].'</div><br>';
+      echo '<div class="alert-danger">'.$_SESSION['error'].'</div>';
     }
-    
+
     ?>
       <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
-      
+
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>

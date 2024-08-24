@@ -14,7 +14,7 @@ $row = $result->fetch_assoc();
 
 
  if($result->num_rows==0){
-$_SESSION['msg'] = "Email or password is wrong";
+$_SESSION['error'] = "Email or password is wrong";
 header("Location:index.php");
  }else{
     $_SESSION['name'] =$row['fullname'] ;

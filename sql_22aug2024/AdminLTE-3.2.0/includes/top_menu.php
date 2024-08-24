@@ -38,7 +38,7 @@
 <!-- logout -->
 <li class="nav-item">
         <a class="nav-link"  href="logout.php" role="button">
-          <i class="fas fa-user"></i>
+          <i class="fas fa-sign-out-alt"></i>
         </a>
       </li>
       <!-- Messages Dropdown Menu -->
