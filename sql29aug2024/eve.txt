@@ -1,0 +1,5 @@
+1)CREATE VIEW product_price_above_5000 AS SELECT * FROM product WHERE price>5000
+
+2)DELETE FROM product WHERE product.manufacturer_id=old.id;
+
+3)INSERT INTO manufacturer(Id,name,address,contact_no)VALUES(NULL,name,address,contact);
