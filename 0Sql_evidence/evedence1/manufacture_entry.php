@@ -1,4 +1,4 @@
-<?php $conn = new mysqli("localhost:3310", "root", "", "eved")  ?>
+<?php $conn = new mysqli("localhost:3310","root","","eved")  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,4 +41,6 @@ if(isset($_POST['submit'])){
 
 </body>
 </html>
+
+
 

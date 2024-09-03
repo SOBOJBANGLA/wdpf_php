@@ -1,0 +1,7 @@
+2.Store Procedure(Manufacture table)-  INSERT INTO manufacturer(id,name,address,contact_no)VALUES(NULL,name,address,contact);
+
+3.Delete trigger-   DELETE FROM product WHERE product.manufacturer_id=old.id;
+
+
+4.View(Product_price_5000_Above)-  CREATE VIEW product_5000_above AS SELECT * FROM product WHERE price>5000;
+

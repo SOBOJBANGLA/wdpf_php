@@ -23,7 +23,7 @@
 
         if ($delete) {
             echo "Delete";
-            header("location: product.php");
+            //header("location: product.php");
         }
     }
 
