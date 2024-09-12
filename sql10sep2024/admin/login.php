@@ -12,19 +12,19 @@ if(isset($_POST['login'])){
 
 if($usertype==1){
 $sql = $con->query("SELECT * FROM admin WHERE email = '$email' AND password = '$password'");
- if($sql->num_rows>0){
+ if($sql->num_rows){
     //session
     $_SESSION['email']= $email;
     $_SESSION['utype']= $usertype;
 
     //Redirect
-header("location : admin_dashboard.php");
+header("location : dashboard.php");
  }
 }
 
 if($usertype==2){
     $sql = $con->query("SELECT * FROM doctors WHERE docEmail = '$email' AND password = '$password'");
- if($sql->num_rows>0){
+ if($sql->num_rows){
     //session
     $_SESSION['email']= $email;
     $_SESSION['utype']= $usertype;
@@ -36,7 +36,7 @@ if($usertype==2){
 
 if($usertype==3){
     $sql = $con->query("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
- if($sql->num_rows>0){
+ if($sql->num_rows){
     //session
     $_SESSION['email']= $email;
     $_SESSION['utype']= $usertype;
