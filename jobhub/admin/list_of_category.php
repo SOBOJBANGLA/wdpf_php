@@ -180,7 +180,10 @@ if (!empty($user_first_name) && !empty($user_last_name)) {
               <!-- end col -->
             </div>
             <!-- end row -->
-
+            </div>
+            </div>
+            </div>
+            
           </div>
 
 

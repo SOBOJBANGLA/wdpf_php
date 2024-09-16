@@ -10,7 +10,7 @@
     <meta content="Themesdesign" name="author" />
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <link href="../plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
@@ -79,6 +79,7 @@
 
                                     if (isset($_POST['submit'])){
                                         extract($_POST);
+                                        mysqli_real_escape_string($db, $details);
 
                                        $photo_name=$_FILES['photo']['name'];
                                        $photo_tname=$_FILES['photo']['tmp_name'];
@@ -86,7 +87,7 @@
                                         $url = $path.$photo_name;
 
                                        if (move_uploaded_file($photo_tname,$path.$photo_name)){
-                                        $db->query("INSERT INTO doctors(id,specilization,doctorName,address,photo,docFees,contactno,docEmail,password) VALUES(NULL,'$specilization','$docname','$address','$photo_name','$docfees','$contact','$email','$pass')");
+                                        $db->query("INSERT INTO doctors(id,specilization,doctorName,address,photo,docFees,contactno,details,docEmail,password) VALUES(NULL,'$specilization','$docname','$address','$photo_name','$docfees','$contact','$details','$email','$pass')");
 
                                         if($db->affected_rows){
                                             echo "Inserted";
@@ -172,6 +173,13 @@
                                         </div>
 
                                         <div class="form-group">
+                                            <label>Doctor profile</label>
+                                            <div>
+                                                <textarea class="form-control" rows="5" name="details" id="details"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
                                             <label>Equal To</label>
                                             <div>
                                                 <input type="password" id="pass2" name="pass" class="form-control" required placeholder="Password" />
@@ -225,19 +233,70 @@
     <script src="assets/js/jquery.slimscroll.js"></script>
     <script src="assets/js/waves.min.js"></script>
 
-    <script src="../plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
     <!-- Parsley js -->
-    <script src="../plugins/parsleyjs/parsley.min.js"></script>
+    <script src="plugins/parsleyjs/parsley.min.js"></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js"></script>
+   
 
     <script>
         $(document).ready(function() {
             $('form').parsley();
         });
     </script>
+
+<script src="plugins/tinymce/tinymce.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        if ($("#details").length > 0) {
+            tinymce.init({
+                selector: "textarea#details",
+                theme: "modern",
+                height: 300,
+                plugins: [
+                    "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                    "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                    "save table contextmenu directionality emoticons template paste textcolor"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+                style_formats: [{
+                    title: 'Bold text',
+                    inline: 'b'
+                }, {
+                    title: 'Red text',
+                    inline: 'span',
+                    styles: {
+                        color: '#ff0000'
+                    }
+                }, {
+                    title: 'Red header',
+                    block: 'h1',
+                    styles: {
+                        color: '#ff0000'
+                    }
+                }, {
+                    title: 'Example 1',
+                    inline: 'span',
+                    classes: 'example1'
+                }, {
+                    title: 'Example 2',
+                    inline: 'span',
+                    classes: 'example2'
+                }, {
+                    title: 'Table styles'
+                }, {
+                    title: 'Table row 1',
+                    selector: 'tr',
+                    classes: 'tablerow1'
+                }]
+            });
+        }
+    });
+</script>
+<script src="assets/js/app.js"></script>
 
 </body>
 

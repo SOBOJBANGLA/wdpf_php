@@ -187,7 +187,9 @@ if (!empty($user_first_name) && !empty($user_last_name)) {
 
           </div>
 
-
+          </div>
+          </div>
+          </div>
           <!--end page content wrapper-->
 
 

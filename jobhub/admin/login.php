@@ -78,18 +78,19 @@
 
 
     <!-- start page content wrapper-->
-    <div class="page-content-wrapper">
+    <div class="page-content-wrapper ">
       <!-- start page content-->
-      <div class="page-content">
+      <div class="page-content ">
 
         <!--start breadcrumb-->
         
         <!--end breadcrumb-->
 
 
-        <div class="row row-cols-1 row-cols-lg-0 row-cols-xxl-4 col-lg-8 col-md-2 offset-md-5 offset-lg-0">
-        <div class="row">
-            <div class="col-xl-10 mx-auto">
+        <!-- <div class="row row-cols-1 row-cols-lg-0 row-cols-xxl-4 col-lg-8 col-md-2 offset-md-5 offset-lg-0"> -->
+        <div class="row offset-2 col-lg-8  ">
+        <div class="row ">
+            <div class="col-xl-10 ml-auto  ">
             
               <div class="card">
                 <div class="card-body">
@@ -116,17 +117,17 @@
                 </div>
               </div>
   
-       
+       </div>
       </div>
       <!-- end page content-->
     </div>
     <!--end page content wrapper-->
-
-
+    </div>
+    </div>
     <!--start footer-->
-   
+    </div>
     <!--end footer-->
-
+    </div>
 
     <!--Start Back To Top Button-->
     <a href="javaScript:;" class="back-to-top">

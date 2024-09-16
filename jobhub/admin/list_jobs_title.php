@@ -177,7 +177,10 @@ require('connection.php');
                         <!-- end col -->
                     </div>
                     <!-- end row -->
-
+                    </div>
+                    </div>
+                    </div>
+                    
                 </div>
 
         

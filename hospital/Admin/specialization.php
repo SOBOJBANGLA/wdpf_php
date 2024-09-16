@@ -111,10 +111,10 @@
                                         <?php  while($row= $sql->fetch_assoc()){  ?>
                                             <tr style="text-align:center">
                                                 <td><?php echo $num; ?></td>
-                                                <td><?php echo $row['specilization'] ?></td>
-                                                <td><a href="" ><div class="button-items"> <input class="btn btn-warning" type="submit" value="Edit">
+                                                <td class="spname"><?php echo $row['specilization'] ?></td>
+                                                <td><div class="button-items"><a href="" data-toggle="modal" class="btn1" data-target=".spcialization-modal-sm"><input class="btn btn-warning" type="submit" value="Edit"></a> 
                                                 <a href=""><input class="btn btn-danger" type="reset" value="Delete"></a>
-                                                </div></a></td>
+                                                </div></td>
                                                
                                             </tr>
                                             <?php $num++; } ?>
@@ -130,7 +130,32 @@
                         <!-- end col -->
                     </div>
                     <!-- end row -->
+<!-- Modal -->
+<div class="modal fade spcialization-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-sm">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title mt-0" id="mySmallModalLabel">Edit Specilization</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                        <div class="form-group">
+                                                           <form action="">
+                                                            <label for="">Specilizarion</label>
+                                                            <input type="text" name="" id="" class="form-control spdisplay">
 
+                                                            <input type="submit" name="update" value="update" id="" class="btn btn-success">
+                                                           </form>
+                                                    </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
                 </div>
                 <!-- container-fluid -->
 
@@ -177,6 +202,16 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function(){
+                alert($(th))
+            })
+        });
+
+
+    </script>
 
 </body>
 

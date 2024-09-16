@@ -183,7 +183,10 @@ require('connection.php');
                     <!-- end row -->
 
                 </div>
-
+                </div>
+                </div>
+                </div>
+                
         
     <!--end page content wrapper-->
 

@@ -66,7 +66,7 @@ require('connection.php');
       <div class="page-content">
 
         <!--start breadcrumb-->
-        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-5">
           <div class="breadcrumb-title pe-3">Dashboard</div>
           <div class="ps-3">
             <nav aria-label="breadcrumb">
@@ -110,7 +110,7 @@ require('connection.php');
         <div class="row offset-2 col-lg-8 ">
         <div class="card">
                 <div class="card-body">
-                  <div class="border p-3 rounded">
+                  <div class="border p-5 rounded">
                   <h6 class="mb-0 text-uppercase">Add User form</h6>
                    <hr>
                   <form class="row g-3" method="get">
@@ -144,8 +144,8 @@ require('connection.php');
                 </div>
                 </div>
               </div>
-
-
+              </div>
+              </div>
       </div>
       <!-- end page content-->
     </div>

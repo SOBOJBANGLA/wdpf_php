@@ -66,7 +66,7 @@ require('connection.php');
       <div class="page-content">
 
         <!--start breadcrumb-->
-        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-5">
           <div class="breadcrumb-title pe-3">Dashboard</div>
           <div class="ps-3">
             <nav aria-label="breadcrumb">
@@ -115,7 +115,8 @@ require('connection.php');
 
 
 
-        <div class="row row-cols-1 row-cols-lg-1 row-cols-xxl-4 col-lg-8 col-md-2 offset-md-5 offset-lg-2">
+        <!-- <div class="row row-cols-1 row-cols-lg-1 row-cols-xxl-4 col-lg-8 col-md-2 offset-md-5 offset-lg-2"> -->
+        <div class="row offset-2 col-lg-8 offset-lg-3 ">
          
         <div class="card">
                   <div class="card-header px-4 py-3">
@@ -181,6 +182,9 @@ require('connection.php');
                         <div class="col-md-12 text-center">
                           <button type="submit" name="submit" class="btn btn-primary px-4">Update</button>
                           
+                          </div>
+                          </div>
+                          </div>
                         </div>
                       </div>
                     </form>
